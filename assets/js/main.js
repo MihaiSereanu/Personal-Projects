@@ -14,7 +14,7 @@ $(".dice").click(function() {
   } else {
     var result = d20.roll(`${diceNum}d${die}+${modifier}`);
     var display = document.getElementById("display")
-    display.innerHTML = `The result is ${result}!`;
+    display.innerHTML = `${diceNum}d${die} + ${modifier} = ${result}`;
   }
   if (result <= 0 ) {
       display.innerHTML = "The result is 1!";

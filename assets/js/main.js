@@ -11,7 +11,7 @@ $(".dice").click(function() {
   } else if (diceNum == null || diceNum == "") {
     var result = d20.roll(`d${die}`);
     var display = document.getElementById("display")
-    display.innerHTML = `$1d${die} + ${modifier} = ${result}`;
+    display.innerHTML = `1d${die} + ${modifier} = ${result}`;
   } else {
     var result = d20.roll(`${diceNum}d${die}+${modifier}`);
     var display = document.getElementById("display")

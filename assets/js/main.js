@@ -6,11 +6,12 @@ $(".dice").click(function() {
   if (modifier == null || modifier == "")  {
     var result = d20.roll(`${diceNum}d${die}`);
     var display = document.getElementById("display")
-    display.innerHTML = `The result is ${result}!`;
+    display.innerHTML = `${diceNum}d${die} = ${result}`;
+    
   } else if (diceNum == null || diceNum == "") {
     var result = d20.roll(`d${die}`);
     var display = document.getElementById("display")
-    display.innerHTML = `The result is ${result}!`;
+    display.innerHTML = `$1d{die} + ${modifier} = ${result}`;
   } else {
     var result = d20.roll(`${diceNum}d${die}+${modifier}`);
     var display = document.getElementById("display")
